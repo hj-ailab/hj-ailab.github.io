@@ -23,7 +23,7 @@ const highlights = [
       <h2 class="eyebrow" id="highlights-heading">Highlights</h2>
       <ul class="highlights-grid">
         {highlights.map(({id, count, label}) => <li><strong data-highlight={id}>{count}</strong><span>{label}</span></li>)}
-        {googleFellowships.length > 0 && <li><strong>{googleFellowships.length}</strong><span>{googleFellowships[0].title}</span></li>}
+        {googleFellowships.map(honor => <li><strong>Selected</strong><span>{honor.title} ({honor.date.slice(0, 4)})</span></li>)}
       </ul>
       <p class="venue-strip">{venues.join(' · ')}</p>
     </section>
