@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import PubEntry from '../components/PubEntry.astro';
+import { copy, publications } from '../lib/data';
+---
+<Base title="Research" description={copy.lab.about}>
+  <header class="page-heading"><p class="eyebrow">HJ AILAB / Research</p><h1>Research</h1><p class="intro">{copy.lab.about}</p></header>
+  <nav class="research-nav" aria-label="Research themes">{copy.themes.map((theme, i) => <a href={`#${theme.id}`}><span class="index">0{i+1}</span>{theme.title} ↓</a>)}</nav>
+  {copy.themes.map((theme, i) => <section class="research-section" id={theme.id}><div class="research-heading"><p class="eyebrow">0{i+1} / {theme.id}</p><h2>{theme.title}</h2><p>{theme.summary}</p><a href={`/publications/?topic=${theme.id}`}>View in library →</a></div><div>{publications.filter(p => p.topics.includes(theme.id)).map(paper => <PubEntry paper={paper} />)}</div></section>)}
+  <p class="legend">* Equal contribution</p>
+</Base>

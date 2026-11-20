@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro';
+import { copy, people, site, emailText } from '../lib/data';
+const intro = people.reduce((value, person) => value.replaceAll(person.email, emailText(person.email)), copy.contact.intro);
+---
+<Base title="Contact" description={intro}><header class="page-heading"><p class="eyebrow">HJ AILAB / Contact</p><h1>Contact</h1><p class="intro">{intro}</p></header><div class="contact-grid">{people.map(person => <section><p class="eyebrow">Email</p><h2>{person.name}</h2><a class="email" href={`mailto:${person.email}`}>{emailText(person.email)}</a></section>)}<section><p class="eyebrow">GitHub</p><h2>HJ AILAB</h2><a href={site.github}>github.com/hj-ailab ↗</a></section></div></Base>

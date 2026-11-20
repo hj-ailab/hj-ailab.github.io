@@ -1,0 +1,430 @@
+- title: Weight-Space Programming Doesn't Need Transformers
+  authors: Hyunjong Ok, Jaeho Lee
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2611.22055
+  note: null
+  tags:
+    - llm
+  code: https://github.com/effl-lab/Weight-Space-Programming
+  project: https://wsp-no-transformer.github.io
+  members:
+    - hyunjong
+  preprint: true
+  id: weight-space-programming-doesn-t-need-transformers
+  topics:
+    - understanding
+  type: preprint
+  selected: true
+- title: "VSpark: Speculative Decoding for Autoregressive Vision-Language-Action
+    Models"
+  authors: Suho Yoo*, Youngjoon Jang*, Hyebin Cho, Taeyeop Lee, Jaewook Jeong,
+    Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2611.22666
+  note: null
+  tags:
+    - efficiency
+    - multimodal
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: true
+  id: vspark-speculative-decoding-for-autoregressive-vision-language-action-models
+  topics:
+    - efficiency
+  type: preprint
+  selected: false
+- title: "One Bias Score, Two Factors: How Mitigations Affect Option Bias in
+    Multiple-Choice Evaluation"
+  authors: Hyunjong Ok, Minjae Park, Jaeho Lee
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2610.20993
+  note: null
+  tags:
+    - evaluation
+    - llm
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: true
+  id: one-bias-score-two-factors-how-mitigations-affect-option-bias-in-multiple-choice-evaluation
+  topics:
+    - evaluation
+  type: preprint
+  selected: false
+- title: "OmniSmartHome: A Multimodal Reasoning Benchmark for Smart-Home Agents"
+  authors: Jihoo Jung*, Suho Yoo*, Jungsoo Choi, Hyebin Cho, Tae Wook Haam,
+    Hyeonggon Ryu, Sumin Park, Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2609.32569
+  note: null
+  tags:
+    - evaluation
+    - multimodal
+    - agents
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: true
+  id: omnismarthome-a-multimodal-reasoning-benchmark-for-smart-home-agents
+  topics:
+    - evaluation
+  type: preprint
+  selected: false
+- title: Hierarchical Compression of Vision-Language Model Benchmarks
+  authors: Hyunjong Ok, Seunggu Kang, Jaeho Lee
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2609.37515
+  note: null
+  tags:
+    - evaluation
+    - multimodal
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: true
+  id: hierarchical-compression-of-vision-language-model-benchmarks
+  topics:
+    - evaluation
+  type: preprint
+  selected: false
+- title: "OmniKVQuant: KV Cache Quantization for Omni-LLMs"
+  authors: Suho Yoo*, Hyunjong Ok*, Jongmin Choi, Jihoo Jung, Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2609.11582
+  note: null
+  tags:
+    - efficiency
+    - multimodal
+    - speech
+  code: null
+  project: null
+  members:
+    - hyunjong
+    - suho
+  preprint: true
+  id: omnikvquant-kv-cache-quantization-for-omni-llms
+  topics:
+    - efficiency
+  type: preprint
+  selected: true
+- title: Tracing Audio Grounding and Answer Selection in Audio LLMs
+  authors: Hyebin Cho, Suho Yoo, Jihoo Jung, Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2609.04637
+  note: null
+  tags:
+    - speech
+    - interpretability
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: true
+  id: tracing-audio-grounding-and-answer-selection-in-audio-llms
+  topics:
+    - understanding
+  type: preprint
+  selected: false
+- title: Uncovering Ordinal-Matching Bias in Audio-Visual LLMs
+  authors: Jihoo Jung, Youngjoon Jang, Hyebin Cho, Suho Yoo, Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2609.34223
+  note: null
+  tags:
+    - evaluation
+    - multimodal
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: true
+  id: uncovering-ordinal-matching-bias-in-audio-visual-llms
+  topics:
+    - evaluation
+  type: preprint
+  selected: false
+- title: "Out of Sight, Still in Mind: Token Compression for Omni-LLMs"
+  authors: Suho Yoo, Youngjoon Jang, Hyebin Cho, Joon Son Chung
+  venue: arXiv
+  year: 2026
+  paper: https://arxiv.org/abs/2607.21179
+  note: null
+  tags:
+    - efficiency
+    - multimodal
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: true
+  id: out-of-sight-still-in-mind-token-compression-for-omni-llms
+  topics:
+    - efficiency
+  type: preprint
+  selected: false
+- title: On the Nature of Attention Sink that Shapes Decoding Strategy in Omni-LLMs
+  authors: Suho Yoo*, Youngjoon Jang*, Joon Son Chung
+  venue: NeurIPS
+  year: 2026
+  paper: https://arxiv.org/abs/2603.14337
+  note: null
+  tags:
+    - interpretability
+    - multimodal
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: false
+  id: on-the-nature-of-attention-sink-that-shapes-decoding-strategy-in-omni-llms
+  topics:
+    - understanding
+  type: conference
+  selected: false
+- title: Who Wins the Conflict? Mechanistic Interpretability of Text Bias in Audio
+    LLMs
+  authors: Hyebin Cho, Suho Yoo, Jaehyuk Jang, Changick Kim, Joon Son Chung
+  venue: EMNLP
+  year: 2026
+  paper: https://arxiv.org/abs/2606.18924
+  note: null
+  tags:
+    - interpretability
+    - speech
+  code: null
+  project: null
+  members:
+    - suho
+  preprint: false
+  id: who-wins-the-conflict-mechanistic-interpretability-of-text-bias-in-audio-llms
+  topics:
+    - understanding
+  type: conference
+  selected: false
+- title: "TempCore: Are Video QA Benchmarks Temporally Grounded? A Frame Selection
+    Sensitivity Analysis and Benchmark"
+  authors: Hyunjong Ok, Jaeho Lee
+  venue: EMNLP
+  year: 2026
+  paper: https://arxiv.org/abs/2509.01167
+  note: null
+  tags:
+    - evaluation
+    - multimodal
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: tempcore-are-video-qa-benchmarks-temporally-grounded-a-frame-selection-sensitivity-analysis-and-benchmark
+  topics:
+    - evaluation
+  type: conference
+  selected: true
+- title: Understanding the Effects of Distractors on Reasoning Vision-Language Models
+  authors: Jiyun Bae, Hyunjong Ok, Sangwoo Mo, Jaeho Lee
+  venue: EMNLP
+  year: 2026
+  paper: https://arxiv.org/abs/2511.21397
+  note: null
+  tags:
+    - evaluation
+    - multimodal
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: understanding-the-effects-of-distractors-on-reasoning-vision-language-models
+  topics:
+    - evaluation
+  type: conference
+  selected: false
+- title: Speculative End-Turn Detector for Efficient Speech Chatbot Assistant
+  authors: Hyunjong Ok, Suho Yoo, Jaeho Lee
+  venue: ACL
+  year: 2026
+  paper: https://arxiv.org/abs/2503.23439
+  note: null
+  tags:
+    - speech
+    - efficiency
+  code: null
+  project: null
+  members:
+    - hyunjong
+    - suho
+  preprint: false
+  id: speculative-end-turn-detector-for-efficient-speech-chatbot-assistant
+  topics:
+    - efficiency
+  type: conference
+  selected: false
+- title: "Lost in the Prompt Order: Revealing the Limitations of Causal Attention
+    in Language Models"
+  authors: Hyunjong Ok, Jaeho Lee
+  venue: ACL Findings
+  year: 2026
+  paper: https://arxiv.org/abs/2601.14152
+  note: null
+  tags:
+    - llm
+    - evaluation
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: lost-in-the-prompt-order-revealing-the-limitations-of-causal-attention-in-language-models
+  topics:
+    - evaluation
+  type: conference
+  selected: false
+- title: "AuditoryBench++: Can Language Models Understand Auditory Knowledge
+    without Hearing?"
+  authors: Hyunjong Ok*, Suho Yoo*, Hyeonjun Kim, Jaeho Lee
+  venue: ICASSP
+  year: 2026
+  paper: https://arxiv.org/abs/2509.17641
+  note: Oral
+  tags:
+    - evaluation
+    - speech
+  code: null
+  project: null
+  members:
+    - hyunjong
+    - suho
+  preprint: false
+  id: auditorybench-can-language-models-understand-auditory-knowledge-without-hearing
+  topics:
+    - evaluation
+  type: conference
+  selected: true
+- title: "S2Cap: A Benchmark and a Baseline for Singing Style Captioning"
+  authors: Hyunjong Ok, Jaeho Lee
+  venue: CIKM
+  year: 2025
+  paper: https://arxiv.org/abs/2409.09866
+  note: Resource Paper
+  tags:
+    - speech
+    - evaluation
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: s2cap-a-benchmark-and-a-baseline-for-singing-style-captioning
+  topics:
+    - evaluation
+  type: conference
+  selected: false
+- title: "Imagine to Hear: Auditory Knowledge Generation Can Be an Effective
+    Assistant for Language Models"
+  authors: Suho Yoo*, Hyunjong Ok*, Jaeho Lee
+  venue: ACL Findings
+  year: 2025
+  paper: https://arxiv.org/abs/2503.16853
+  note: null
+  tags:
+    - speech
+    - llm
+  code: null
+  project: null
+  members:
+    - hyunjong
+    - suho
+  preprint: false
+  id: imagine-to-hear-auditory-knowledge-generation-can-be-an-effective-assistant-for-language-models
+  topics: []
+  type: conference
+  selected: false
+- title: "AudioBERT: Audio Knowledge Augmented Language Model"
+  authors: Hyunjong Ok*, Suho Yoo*, Jaeho Lee
+  venue: ICASSP
+  year: 2025
+  paper: https://arxiv.org/abs/2409.08199
+  note: null
+  tags:
+    - speech
+    - llm
+  code: null
+  project: null
+  members:
+    - hyunjong
+    - suho
+  preprint: false
+  id: audiobert-audio-knowledge-augmented-language-model
+  topics: []
+  type: conference
+  selected: false
+- title: Decoding with Limited Teacher Supervision Requires Understanding When to
+    Trust the Teacher
+  authors: Hyunjong Ok, Jegwang Ryu, Jaeho Lee
+  venue: EMNLP
+  year: 2024
+  paper: https://arxiv.org/abs/2406.18002
+  note: null
+  tags:
+    - llm
+    - efficiency
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: decoding-with-limited-teacher-supervision-requires-understanding-when-to-trust-the-teacher
+  topics:
+    - efficiency
+  type: conference
+  selected: false
+- title: "SCANNER: Knowledge-Enhanced Approach for Robust Multi-modal Named Entity
+    Recognition of Unseen Entities"
+  authors: Hyunjong Ok, Taeho Kil, Sukmin Seo, Jaeho Lee
+  venue: NAACL
+  year: 2024
+  paper: https://arxiv.org/abs/2404.01914
+  note: null
+  tags:
+    - multimodal
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: scanner-knowledge-enhanced-approach-for-robust-multi-modal-named-entity-recognition-of-unseen-entities
+  topics: []
+  type: conference
+  selected: false
+- title: Post-Trained Language Model Adaptive to Extractive Summarization of Long
+    Spoken Documents
+  authors: Hyunjong Ok, Seong-Bae Park
+  venue: ICASSP
+  year: 2023
+  paper: https://ieeexplore.ieee.org/document/10094938
+  note: Grand Challenge
+  tags:
+    - speech
+  code: null
+  project: null
+  members:
+    - hyunjong
+  preprint: false
+  id: post-trained-language-model-adaptive-to-extractive-summarization-of-long-spoken-documents
+  topics: []
+  type: conference
+  selected: false

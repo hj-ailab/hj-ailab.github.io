@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import NewsList from '../../components/NewsList.astro';
+import { news } from '../../lib/data';
+const years = [...new Set(news.map(item => item.date.slice(0,4)))];
+---
+<Base title="News"><header class="page-heading"><p class="eyebrow">HJ AILAB / News</p><div class="section-heading"><h1>News</h1><a href="/news/rss.xml">RSS feed ↗</a></div></header>{years.map(year => <section class="news-year"><h2>{year}</h2><NewsList items={news.filter(item => item.date.startsWith(year))} /></section>)}</Base>

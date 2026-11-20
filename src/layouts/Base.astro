@@ -1,0 +1,58 @@
+---
+import '@fontsource/source-serif-4/latin-600.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-500.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '../styles/global.css';
+import { copy, site } from '../lib/data';
+interface Props { title: string; description?: string }
+const { title, description = copy.lab.intro } = Astro.props;
+const navigation = ['Research', 'Publications', 'People', 'News', 'Contact'];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} /><meta name="color-scheme" content="light dark" />
+    <title>{title === 'Home' ? site.name : `${title} — ${site.name}`}</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${site.name} News`} href="/news/rss.xml" />
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch (error) { console.warn('Theme preference storage unavailable', error); }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="/">{site.name}<span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">{navigation.map(label => <a href={`/${label.toLowerCase()}/`} aria-current={Astro.url.pathname.startsWith(`/${label.toLowerCase()}/`) ? 'page' : undefined}>{label}</a>)}</nav>
+      <button class="theme-toggle" type="button" hidden aria-label="Switch to Dark mode"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button>
+    </header>
+    <main id="main" class="wrap"><slot /></main>
+    <footer class="site-footer wrap"><p>{copy.footer.blurb}</p><div class="footer-row"><span>© {new Date().getFullYear()} {site.name}</span><div><a href="/contact/">Contact</a><a href={site.github}>GitHub ↗</a><a href="https://github.com/hj-ailab/hj-ailab.github.io">Site source ↗</a><a href="/news/rss.xml">RSS ↗</a></div></div>{site.business.enabled && <small>{[site.business.name, site.business.representative, site.business.registration_no, site.business.address].join(' · ')}</small>}</footer>
+    <script>
+      const button = document.querySelector<HTMLButtonElement>('.theme-toggle')!;
+      const media = matchMedia('(prefers-color-scheme: dark)');
+      const dark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : media.matches;
+      const refresh = () => {
+        button.setAttribute('aria-label', `Switch to ${dark() ? 'Light' : 'Dark'} mode`);
+        button.querySelector('.theme-label')!.textContent = dark() ? 'Light' : 'Dark';
+      };
+      button.hidden = false;
+      refresh();
+      media.addEventListener('change', refresh);
+      button.addEventListener('click', () => {
+        const theme = dark() ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try { localStorage.setItem('theme', theme); }
+        catch (error) { console.warn('Theme preference could not be saved', error); }
+        refresh();
+      });
+    </script>
+  </body>
+</html>

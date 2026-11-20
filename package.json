@@ -1,0 +1,21 @@
+{
+  "name": "hj-ailab-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "astro preview",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.2.6",
+    "@fontsource/ibm-plex-sans": "5.2.6",
+    "@fontsource/source-serif-4": "5.2.6",
+    "astro": "5.16.0",
+    "marked": "16.4.1",
+    "yaml": "2.8.1",
+    "zod": "3.25.76"
+  }
+}

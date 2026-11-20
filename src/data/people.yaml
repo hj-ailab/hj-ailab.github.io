@@ -1,0 +1,16 @@
+- id: hyunjong
+  name: Hyunjong Ok
+  website: https://hj-ok.github.io
+  scholar: https://scholar.google.com/citations?user=mgivfA4AAAAJ
+  github: https://github.com/HJ-Ok
+  email: hyunjong.ok@postech.ac.kr
+  photo: null
+  initials: HO
+- id: suho
+  name: Suho Yoo
+  website: https://suho-yoo.github.io
+  scholar: https://scholar.google.com/citations?user=oZHlU9EAAAAJ
+  github: https://github.com/suho-yoo
+  email: suho.yoo@kaist.ac.kr
+  photo: /images/suho.webp
+  initials: SY

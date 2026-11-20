@@ -1,0 +1,7 @@
+---
+import { marked } from 'marked';
+import { news } from '../lib/data';
+interface Props { items?: typeof news }
+const { items = news } = Astro.props;
+---
+<ul class="news-list">{items.map((item) => <li><time datetime={item.date === 'TODO' ? undefined : item.date}>{item.date}</time><span class="category">{item.category}</span><div set:html={marked.parseInline(item.text)} /></li>)}</ul>

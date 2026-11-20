@@ -1,0 +1,13 @@
+---
+import { emailText, type Person } from '../lib/data';
+interface Props { person: Person; compact?: boolean }
+const { person, compact = false } = Astro.props;
+---
+<article class:list={['person', {compact}]} id={compact ? undefined : person.id}>
+  <a class="portrait-link" href={person.website} aria-label={`${person.name} — website`}>
+    {person.photo ? <img class="portrait" src={person.photo} alt={person.name} width="480" height="480" loading="lazy" /> : <span class="portrait initials" role="img" aria-label={`${person.name} initials`}>{person.initials}</span>}
+  </a>
+  <div><h2><a href={person.website}>{person.name}</a></h2><p class="role">{person.role}</p>
+    {!compact && <><p class="affiliation">{person.affiliation}</p><p class="bio">{person.bio}</p><ul class="interests">{person.interests.map(interest => <li>{interest}</li>)}</ul><div class="person-links"><a href={person.website}>Website ↗</a><a href={person.scholar}>Scholar ↗</a><a href={person.github}>GitHub ↗</a></div><a class="email" href={`mailto:${person.email}`}>{emailText(person.email)}</a></>}
+  </div>
+</article>

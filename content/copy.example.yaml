@@ -1,0 +1,51 @@
+lab:
+  name: TODO
+  tagline: TODO
+  intro: TODO
+  about: TODO
+themes:
+  - id: evaluation
+    title: TODO
+    bullet: TODO
+    summary: TODO
+  - id: efficiency
+    title: TODO
+    bullet: TODO
+    summary: TODO
+  - id: understanding
+    title: TODO
+    bullet: TODO
+    summary: TODO
+people:
+  - id: hyunjong
+    role: TODO
+    affiliation: TODO
+    interests:
+      - TODO
+    bio: TODO
+  - id: suho
+    role: TODO
+    affiliation: TODO
+    interests:
+      - TODO
+    bio: TODO
+news:
+  - date: TODO
+    category: TODO
+    text: TODO
+  - date: TODO
+    category: TODO
+    text: TODO
+  - date: TODO
+    category: TODO
+    text: TODO
+  - date: TODO
+    category: TODO
+    text: TODO
+  - date: TODO
+    category: TODO
+    text: TODO
+contact:
+  intro: TODO
+footer:
+  blurb: TODO

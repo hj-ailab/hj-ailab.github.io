@@ -1,0 +1,76 @@
+lab:
+  name: 'HJ AILAB'
+  tagline: >-
+    We study evaluation, efficiency, and internal mechanisms across multimodal, speech, and language models.
+  intro: >-
+    HJ AILAB is a two-person independent AI research lab founded in 2026 by Hyunjong Ok and Suho Yoo. As graduate students at POSTECH and KAIST, we run the lab alongside our degrees. We publish joint and individual research on speech, multimodal, and language models, including joint papers at ICASSP, ACL, and ACL Findings.
+  about: >-
+    HJ AILAB is a two-person independent AI research lab founded in 2026 by Hyunjong Ok and Suho Yoo, who run the lab alongside their graduate degrees at POSTECH and KAIST. We study how to measure multimodal, speech, and language models through diagnostic benchmarks and simulator-based evaluations, and how to make speech and omni models cheaper to run. We also examine how models use knowledge and attention inside, and what structures language models build when they write network weights themselves.
+
+themes:
+  - id: 'evaluation'
+    title: 'Evaluation and Benchmarking'
+    bullet: 'Measuring what multimodal, speech, and language models can actually do.'
+    summary: >-
+      We study how to measure what multimodal, speech, and language models can actually do. Our work includes diagnostic benchmarks such as AuditoryBench++ and TempCore, hierarchical compression of vision-language model benchmarks, and analyses of evaluation bias such as One Bias Score, Two Factors. We also develop voice-agent and simulator-based evaluation methods.
+  - id: 'efficiency'
+    title: 'Model Efficiency'
+    bullet: 'Making speech, omni, and vision-language-action models cheaper to run.'
+    summary: >-
+      We develop methods that make speech, omni, and vision-language-action models cheaper to run. Our work covers KV cache quantization, token compression, speculative decoding, and early end-of-turn detection. Representative papers include OmniKVQuant for omni-LLMs, VSpark for autoregressive vision-language-action models, Out of Sight, Still in Mind, and Speculative End-Turn Detector.
+  - id: 'understanding'
+    title: 'Understanding Model Internals'
+    bullet: 'Studying internal attention, grounded knowledge, and how language models write network weights.'
+    summary: >-
+      We study how models use knowledge and attention inside, examining attention sinks, text bias, and audio grounding. We also investigate weight-space programming, where a language model writes a network's weights directly without gradient training. Representative papers include Attention Sink in Omni-LLMs, Who Wins the Conflict, and Weight-Space Programming Doesn't Need Transformers.
+
+people:
+  - id: 'hyunjong'
+    role: 'Co-founder'
+    affiliation: 'Ph.D. student, Graduate School of AI, POSTECH'
+    interests:
+      - 'Multimodal and speech evaluation'
+      - 'Voice-agent and simulator-based evaluation'
+      - 'Weight-space programming'
+      - 'Harness evolution for agents'
+    bio: >-
+      Hyunjong Ok is a Ph.D. student at POSTECH advised by Prof. Jaeho Lee. Hyunjong studies diagnostic benchmarks, voice-agent and simulator-based evaluation, weight-space programming, and how language models use knowledge grounded in other modalities.
+  - id: 'suho'
+    role: 'Co-founder'
+    affiliation: 'M.S. student, Electrical Engineering, KAIST'
+    interests:
+      - 'Large language models'
+      - 'Multimodal learning'
+      - 'Speech processing'
+      - 'Efficient and interpretable omni-LLMs'
+    bio: >-
+      Suho Yoo is an M.S. student at KAIST advised by Prof. Joon Son Chung. Suho works on multimodal learning and speech processing, with recent papers on efficient omni-LLMs and interpretability of audio and omni-LLMs.
+
+news:
+  - date: '2026-11'
+    category: 'release'
+    text: >-
+      Hyunjong Ok and Suho Yoo launched HJ AILAB and put this website online.
+  - date: '2026-11'
+    category: 'paper'
+    text: >-
+      The preprint [Weight-Space Programming Doesn't Need Transformers](https://arxiv.org/abs/2611.22055) was posted on arXiv.
+  - date: '2026-11'
+    category: 'paper'
+    text: >-
+      The preprint [VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models](https://arxiv.org/abs/2611.22666) is available on arXiv.
+  - date: '2026-10'
+    category: 'paper'
+    text: >-
+      The preprint [One Bias Score, Two Factors](https://arxiv.org/abs/2610.20993) was posted on arXiv.
+  - date: '2026-09'
+    category: 'paper'
+    text: >-
+      Our joint preprint [OmniKVQuant: KV Cache Quantization for Omni-LLMs](https://arxiv.org/abs/2609.11582) is available on arXiv.
+
+contact:
+  intro: >-
+    We welcome questions, research discussions, and collaboration inquiries on speech, multimodal, and language models. Because HJ AILAB does not have a shared lab email yet, please email Hyunjong Ok at hyunjong.ok@postech.ac.kr or Suho Yoo at suho.yoo@kaist.ac.kr directly.
+
+footer:
+  blurb: 'HJ AILAB is a two-person independent AI research lab founded in 2026.'

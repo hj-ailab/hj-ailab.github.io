@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro';
+import PersonCard from '../components/PersonCard.astro';
+import { people } from '../lib/data';
+---
+<Base title="People"><header class="page-heading"><p class="eyebrow">HJ AILAB / People</p><h1>People</h1></header><div class="people-grid">{people.map(person => <PersonCard person={person} />)}</div></Base>
