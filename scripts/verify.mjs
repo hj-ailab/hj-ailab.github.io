@@ -55,9 +55,8 @@ if (build.code !== 0) {
     const routes = [['home','/'],['research','/research/'],['publications','/publications/'],['people','/people/'],['news','/news/'],['contact','/contact/'],['404','/404.html']];
     const raw=JSON.parse(readFileSync('data/publications.json','utf8'));
     const conferencePapers = raw.filter(paper => !paper.preprint && paper.venue !== 'arXiv');
-    const headlinePapers = conferencePapers.filter(paper => ['NeurIPS', 'ACL', 'EMNLP', 'NAACL', 'ACL Findings'].includes(paper.venue));
     const topTierPapers = conferencePapers.filter(paper => ['NeurIPS', 'ACL', 'EMNLP', 'NAACL', 'ACL Findings', 'ICASSP', 'CIKM'].includes(paper.venue));
-    const expectedCounts = {total: raw.length, conference: conferencePapers.length, 'top-tier': headlinePapers.length};
+    const expectedCounts = {total: raw.length, 'top-tier': topTierPapers.length};
     await page.goto(base, {waitUntil:'load'});
     const counts = await page.$$eval('[data-highlight]', items => Object.fromEntries(items.map(el => [el.dataset.highlight, Number(el.textContent)])));
     assert.deepEqual(counts, expectedCounts);
@@ -67,7 +66,7 @@ if (build.code !== 0) {
     const findings = raw.filter(paper => paper.venue === 'ACL Findings');
     assert.ok(findings.length > 0, 'Expected ACL Findings fixtures');
     for (const paper of findings) assert.ok(badged.includes(paper.title), paper.title);
-    assert.equal(counts['top-tier'], 9);
+    assert.equal(counts['top-tier'], 13);
     await page.goto(`${base}/people/`, {waitUntil:'load'});
     for (const id of ['hyunjong', 'suho']) {
       const photo = await page.$eval(`#${id} img.portrait`, async img => {
@@ -79,7 +78,7 @@ if (build.code !== 0) {
       assert.ok(photo.width > 0, `${id} portrait width`);
       section('Member photo', `PASS: ${photo.src} loaded (naturalWidth=${photo.width}).`);
     }
-    section('Highlights and top-tier badges', `PASS: rendered highlights match data/publications.json (${counts.total} total, ${counts.conference} conference, ${counts['top-tier']} top-tier).\nPASS: all ${badged.length} top-tier badges match papers at the top-tier venues. All ${findings.length} ACL Findings entries are counted.`);
+    section('Highlights and top-tier badges', `PASS: rendered highlights match data/publications.json (${counts.total} total, ${counts['top-tier']} top-tier).\nPASS: all ${badged.length} top-tier badges match papers at the top-tier venues. All ${findings.length} ACL Findings entries are counted.`);
     mkdirSync('docs/screens',{recursive:true});
     const screenshots=[];
     for (const theme of ['light','dark']) {

@@ -1,6 +1,6 @@
 # Build report
 
-Generated: 2026-11-20T03:45:46.650Z
+Generated: 2026-11-20T03:47:37.174Z
 
 ## Static build
 
@@ -10,46 +10,46 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:45:47 [content] Syncing content
-12:45:47 [content] Synced content
-12:45:47 [types] Generated 39ms
-12:45:47 [build] output: "static"
-12:45:47 [build] mode: "static"
-12:45:47 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:45:47 [build] Collecting build info...
-12:45:47 [build] ✓ Completed in 54ms.
-12:45:47 [build] Building static entrypoints...
-12:45:48 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:45:50 [vite] ✓ built in 2.50s
-12:45:50 [build] ✓ Completed in 2.53s.
+12:47:38 [content] Syncing content
+12:47:38 [content] Synced content
+12:47:38 [types] Generated 39ms
+12:47:38 [build] output: "static"
+12:47:38 [build] mode: "static"
+12:47:38 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:38 [build] Collecting build info...
+12:47:38 [build] ✓ Completed in 55ms.
+12:47:38 [build] Building static entrypoints...
+12:47:38 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:39 [vite] ✓ built in 846ms
+12:47:39 [build] ✓ Completed in 881ms.
 
  building client (vite) 
-12:45:50 [vite] transforming...
-12:45:50 [vite] ✓ 4 modules transformed.
-12:45:50 [vite] rendering chunks...
-12:45:50 [vite] ✓ built in 20ms
+12:47:39 [vite] transforming...
+12:47:39 [vite] ✓ 4 modules transformed.
+12:47:39 [vite] rendering chunks...
+12:47:39 [vite] ✓ built in 19ms
 
  generating static routes 
-12:45:50 ▶ src/pages/404.astro
-12:45:50   └─ /404.html (+10ms) 
-12:45:50 ▶ src/pages/contact.astro
-12:45:50   └─ /contact/index.html (+1ms) 
-12:45:50 ▶ src/pages/index.astro
-12:45:50   └─ /index.html (+11ms) 
-12:45:50 ▶ src/pages/news/index.astro
-12:45:50   └─ /news/index.html (+1ms) 
-12:45:50 λ src/pages/news/rss.xml.ts
-12:45:50   └─ /news/rss.xml (+2ms) 
-12:45:50 ▶ src/pages/people.astro
-12:45:50   └─ /people/index.html (+2ms) 
-12:45:50 ▶ src/pages/publications.astro
-12:45:50   └─ /publications/index.html (+3ms) 
-12:45:50 ▶ src/pages/research.astro
-12:45:50   └─ /research/index.html (+2ms) 
-12:45:50 ✓ Completed in 104ms.
+12:47:39 ▶ src/pages/404.astro
+12:47:39   └─ /404.html (+10ms) 
+12:47:39 ▶ src/pages/contact.astro
+12:47:39   └─ /contact/index.html (+2ms) 
+12:47:39 ▶ src/pages/index.astro
+12:47:39   └─ /index.html (+10ms) 
+12:47:39 ▶ src/pages/news/index.astro
+12:47:39   └─ /news/index.html (+3ms) 
+12:47:39 λ src/pages/news/rss.xml.ts
+12:47:39   └─ /news/rss.xml (+2ms) 
+12:47:39 ▶ src/pages/people.astro
+12:47:39   └─ /people/index.html (+2ms) 
+12:47:39 ▶ src/pages/publications.astro
+12:47:39   └─ /publications/index.html (+3ms) 
+12:47:39 ▶ src/pages/research.astro
+12:47:39   └─ /research/index.html (+15ms) 
+12:47:39 ✓ Completed in 117ms.
 
-12:45:50 [build] 7 page(s) built in 2.72s
-12:45:50 [build] Complete!
+12:47:39 [build] 7 page(s) built in 1.09s
+12:47:39 [build] Complete!
 
 exit code: 0
 ```
@@ -88,7 +88,7 @@ PASS: /images/suho.webp loaded (naturalWidth=480).
 ## Highlights and top-tier badges
 
 ```text
-PASS: rendered highlights match data/publications.json (22 total, 13 conference, 9 top-tier).
+PASS: rendered highlights match data/publications.json (22 total, 13 top-tier).
 PASS: all 13 top-tier badges match papers at the top-tier venues. All 2 ACL Findings entries are counted.
 ```
 
@@ -162,30 +162,30 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:45:56 [content] Syncing content
-12:45:56 [content] Synced content
-12:45:57 [types] Generated 1.07s
-12:45:57 [build] output: "static"
-12:45:57 [build] mode: "static"
-12:45:57 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:45:57 [build] Collecting build info...
-12:45:57 [build] ✓ Completed in 1.08s.
-12:45:57 [build] Building static entrypoints...
-12:45:58 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:45:58 [vite] ✓ built in 728ms
-12:45:58 [build] ✓ Completed in 766ms.
+12:47:45 [content] Syncing content
+12:47:46 [content] Synced content
+12:47:46 [types] Generated 39ms
+12:47:46 [build] output: "static"
+12:47:46 [build] mode: "static"
+12:47:46 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:46 [build] Collecting build info...
+12:47:46 [build] ✓ Completed in 55ms.
+12:47:46 [build] Building static entrypoints...
+12:47:46 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:47 [vite] ✓ built in 1.63s
+12:47:47 [build] ✓ Completed in 1.66s.
 
  building client (vite) 
-12:45:58 [vite] transforming...
-12:45:58 [vite] ✓ 4 modules transformed.
-12:45:58 [vite] rendering chunks...
-12:45:58 [vite] ✓ built in 24ms
+12:47:47 [vite] transforming...
+12:47:47 [vite] ✓ 4 modules transformed.
+12:47:47 [vite] rendering chunks...
+12:47:47 [vite] ✓ built in 21ms
 
  generating static routes 
 src/data/publications.yaml
 0.topics.0: Invalid enum value. Expected 'evaluation' | 'efficiency' | 'understanding', received 'unknown-topic'
   Stack trace:
-    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_B7sI23_y.mjs:14:11)
+    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_GQKj7N8X.mjs:14:11)
     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
     at async BuildPipeline.retrieveSsrEntry (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/pipeline.js:221:15)
     at async staticBuild (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/static-build.js:87:5)
@@ -202,30 +202,30 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:45:59 [content] Syncing content
-12:45:59 [content] Synced content
-12:45:59 [types] Generated 39ms
-12:45:59 [build] output: "static"
-12:45:59 [build] mode: "static"
-12:45:59 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:45:59 [build] Collecting build info...
-12:45:59 [build] ✓ Completed in 54ms.
-12:45:59 [build] Building static entrypoints...
-12:46:00 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:46:00 [vite] ✓ built in 728ms
-12:46:00 [build] ✓ Completed in 762ms.
+12:47:48 [content] Syncing content
+12:47:48 [content] Synced content
+12:47:48 [types] Generated 39ms
+12:47:48 [build] output: "static"
+12:47:48 [build] mode: "static"
+12:47:48 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:48 [build] Collecting build info...
+12:47:48 [build] ✓ Completed in 54ms.
+12:47:48 [build] Building static entrypoints...
+12:47:49 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:49 [vite] ✓ built in 934ms
+12:47:49 [build] ✓ Completed in 968ms.
 
  building client (vite) 
-12:46:00 [vite] transforming...
-12:46:00 [vite] ✓ 4 modules transformed.
-12:46:00 [vite] rendering chunks...
-12:46:00 [vite] ✓ built in 21ms
+12:47:49 [vite] transforming...
+12:47:49 [vite] ✓ 4 modules transformed.
+12:47:49 [vite] rendering chunks...
+12:47:49 [vite] ✓ built in 20ms
 
  generating static routes 
 src/data/publications.yaml
 0.venue: Required
   Stack trace:
-    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_B7sI23_y.mjs:14:11)
+    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_GQKj7N8X.mjs:14:11)
     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
     at async BuildPipeline.retrieveSsrEntry (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/pipeline.js:221:15)
     at async staticBuild (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/static-build.js:87:5)
@@ -242,30 +242,30 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:46:01 [content] Syncing content
-12:46:01 [content] Synced content
-12:46:01 [types] Generated 39ms
-12:46:01 [build] output: "static"
-12:46:01 [build] mode: "static"
-12:46:01 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:46:01 [build] Collecting build info...
-12:46:01 [build] ✓ Completed in 54ms.
-12:46:01 [build] Building static entrypoints...
-12:46:02 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:46:02 [vite] ✓ built in 745ms
-12:46:02 [build] ✓ Completed in 780ms.
+12:47:51 [content] Syncing content
+12:47:51 [content] Synced content
+12:47:51 [types] Generated 53ms
+12:47:51 [build] output: "static"
+12:47:51 [build] mode: "static"
+12:47:51 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:51 [build] Collecting build info...
+12:47:51 [build] ✓ Completed in 69ms.
+12:47:51 [build] Building static entrypoints...
+12:47:51 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:51 [vite] ✓ built in 783ms
+12:47:51 [build] ✓ Completed in 817ms.
 
  building client (vite) 
-12:46:02 [vite] transforming...
-12:46:02 [vite] ✓ 4 modules transformed.
-12:46:02 [vite] rendering chunks...
-12:46:02 [vite] ✓ built in 22ms
+12:47:51 [vite] transforming...
+12:47:51 [vite] ✓ 4 modules transformed.
+12:47:51 [vite] rendering chunks...
+12:47:51 [vite] ✓ built in 21ms
 
  generating static routes 
 src/data/honors.yaml
 0.member: Invalid enum value. Expected 'hyunjong' | 'suho', received 'unknown-member'
   Stack trace:
-    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_B7sI23_y.mjs:14:11)
+    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_GQKj7N8X.mjs:14:11)
     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
     at async BuildPipeline.retrieveSsrEntry (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/pipeline.js:221:15)
     at async staticBuild (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/static-build.js:87:5)
@@ -282,30 +282,30 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:46:03 [content] Syncing content
-12:46:03 [content] Synced content
-12:46:03 [types] Generated 39ms
-12:46:03 [build] output: "static"
-12:46:03 [build] mode: "static"
-12:46:03 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:46:03 [build] Collecting build info...
-12:46:03 [build] ✓ Completed in 55ms.
-12:46:03 [build] Building static entrypoints...
-12:46:04 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:46:04 [vite] ✓ built in 816ms
-12:46:04 [build] ✓ Completed in 850ms.
+12:47:53 [content] Syncing content
+12:47:53 [content] Synced content
+12:47:53 [types] Generated 45ms
+12:47:53 [build] output: "static"
+12:47:53 [build] mode: "static"
+12:47:53 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:53 [build] Collecting build info...
+12:47:53 [build] ✓ Completed in 64ms.
+12:47:53 [build] Building static entrypoints...
+12:47:53 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:54 [vite] ✓ built in 860ms
+12:47:54 [build] ✓ Completed in 898ms.
 
  building client (vite) 
-12:46:04 [vite] transforming...
-12:46:04 [vite] ✓ 4 modules transformed.
-12:46:04 [vite] rendering chunks...
-12:46:04 [vite] ✓ built in 20ms
+12:47:54 [vite] transforming...
+12:47:54 [vite] ✓ 4 modules transformed.
+12:47:54 [vite] rendering chunks...
+12:47:54 [vite] ✓ built in 21ms
 
  generating static routes 
 src/data/honors.yaml
 0.kind: Invalid enum value. Expected 'fellowship' | 'scholarship' | 'award' | 'competition', received 'unknown-kind'
   Stack trace:
-    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_B7sI23_y.mjs:14:11)
+    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_GQKj7N8X.mjs:14:11)
     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
     at async BuildPipeline.retrieveSsrEntry (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/pipeline.js:221:15)
     at async staticBuild (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/static-build.js:87:5)
@@ -322,30 +322,30 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:46:05 [content] Syncing content
-12:46:05 [content] Synced content
-12:46:05 [types] Generated 39ms
-12:46:05 [build] output: "static"
-12:46:05 [build] mode: "static"
-12:46:05 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:46:05 [build] Collecting build info...
-12:46:05 [build] ✓ Completed in 55ms.
-12:46:05 [build] Building static entrypoints...
-12:46:06 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:46:06 [vite] ✓ built in 738ms
-12:46:06 [build] ✓ Completed in 772ms.
+12:47:55 [content] Syncing content
+12:47:55 [content] Synced content
+12:47:55 [types] Generated 54ms
+12:47:55 [build] output: "static"
+12:47:55 [build] mode: "static"
+12:47:55 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:55 [build] Collecting build info...
+12:47:55 [build] ✓ Completed in 70ms.
+12:47:55 [build] Building static entrypoints...
+12:47:56 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:56 [vite] ✓ built in 1.51s
+12:47:56 [build] ✓ Completed in 1.54s.
 
  building client (vite) 
-12:46:06 [vite] transforming...
-12:46:06 [vite] ✓ 4 modules transformed.
-12:46:06 [vite] rendering chunks...
-12:46:06 [vite] ✓ built in 21ms
+12:47:56 [vite] transforming...
+12:47:56 [vite] ✓ 4 modules transformed.
+12:47:56 [vite] rendering chunks...
+12:47:56 [vite] ✓ built in 20ms
 
  generating static routes 
 src/data/service.yaml
 0.member: Invalid enum value. Expected 'hyunjong' | 'suho', received 'unknown-member'
   Stack trace:
-    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_B7sI23_y.mjs:14:11)
+    at validate (file:///home2/r7play/hj-ailab.github.io/dist/chunks/data_GQKj7N8X.mjs:14:11)
     at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
     at async BuildPipeline.retrieveSsrEntry (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/pipeline.js:221:15)
     at async staticBuild (file:///home2/r7play/hj-ailab.github.io/node_modules/astro/dist/core/build/static-build.js:87:5)
@@ -362,46 +362,46 @@ $ npm run build
 > hj-ailab-site@1.0.0 build
 > ASTRO_TELEMETRY_DISABLED=1 astro build
 
-12:46:07 [content] Syncing content
-12:46:07 [content] Synced content
-12:46:07 [types] Generated 40ms
-12:46:07 [build] output: "static"
-12:46:07 [build] mode: "static"
-12:46:07 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
-12:46:07 [build] Collecting build info...
-12:46:07 [build] ✓ Completed in 56ms.
-12:46:07 [build] Building static entrypoints...
-12:46:08 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
-12:46:08 [vite] ✓ built in 716ms
-12:46:08 [build] ✓ Completed in 751ms.
+12:47:58 [content] Syncing content
+12:47:58 [content] Synced content
+12:47:58 [types] Generated 40ms
+12:47:58 [build] output: "static"
+12:47:58 [build] mode: "static"
+12:47:58 [build] directory: /home2/r7play/hj-ailab.github.io/dist/
+12:47:58 [build] Collecting build info...
+12:47:58 [build] ✓ Completed in 56ms.
+12:47:58 [build] Building static entrypoints...
+12:47:58 [WARN] [vite] "isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".
+12:47:58 [vite] ✓ built in 756ms
+12:47:58 [build] ✓ Completed in 793ms.
 
  building client (vite) 
-12:46:08 [vite] transforming...
-12:46:08 [vite] ✓ 4 modules transformed.
-12:46:08 [vite] rendering chunks...
-12:46:08 [vite] ✓ built in 20ms
+12:47:58 [vite] transforming...
+12:47:58 [vite] ✓ 4 modules transformed.
+12:47:58 [vite] rendering chunks...
+12:47:58 [vite] ✓ built in 21ms
 
  generating static routes 
-12:46:08 ▶ src/pages/404.astro
-12:46:08   └─ /404.html (+10ms) 
-12:46:08 ▶ src/pages/contact.astro
-12:46:08   └─ /contact/index.html (+2ms) 
-12:46:08 ▶ src/pages/index.astro
-12:46:08   └─ /index.html (+11ms) 
-12:46:08 ▶ src/pages/news/index.astro
-12:46:08   └─ /news/index.html (+1ms) 
-12:46:08 λ src/pages/news/rss.xml.ts
-12:46:08   └─ /news/rss.xml (+1ms) 
-12:46:08 ▶ src/pages/people.astro
-12:46:08   └─ /people/index.html (+2ms) 
-12:46:08 ▶ src/pages/publications.astro
-12:46:08   └─ /publications/index.html (+4ms) 
-12:46:08 ▶ src/pages/research.astro
-12:46:08   └─ /research/index.html (+2ms) 
-12:46:08 ✓ Completed in 105ms.
+12:47:58 ▶ src/pages/404.astro
+12:47:58   └─ /404.html (+11ms) 
+12:47:59 ▶ src/pages/contact.astro
+12:47:59   └─ /contact/index.html (+2ms) 
+12:47:59 ▶ src/pages/index.astro
+12:47:59   └─ /index.html (+13ms) 
+12:47:59 ▶ src/pages/news/index.astro
+12:47:59   └─ /news/index.html (+2ms) 
+12:47:59 λ src/pages/news/rss.xml.ts
+12:47:59   └─ /news/rss.xml (+2ms) 
+12:47:59 ▶ src/pages/people.astro
+12:47:59   └─ /people/index.html (+2ms) 
+12:47:59 ▶ src/pages/publications.astro
+12:47:59   └─ /publications/index.html (+4ms) 
+12:47:59 ▶ src/pages/research.astro
+12:47:59   └─ /research/index.html (+2ms) 
+12:47:59 ✓ Completed in 109ms.
 
-12:46:08 [build] 7 page(s) built in 946ms
-12:46:08 [build] Complete!
+12:47:59 [build] 7 page(s) built in 993ms
+12:47:59 [build] Complete!
 
 exit code: 0
 ```
