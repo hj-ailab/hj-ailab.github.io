@@ -1,6 +1,7 @@
 name: HJ AILAB
 founded: 2023
-top_tier_venues: [NeurIPS, ACL, EMNLP, NAACL, ACL Findings]
+top_tier_venues: [NeurIPS, ACL, EMNLP, NAACL, ACL Findings, ICASSP, CIKM]
+headline_venues: [NeurIPS, ACL, EMNLP, NAACL, ACL Findings]
 github: https://github.com/hj-ailab
 business:
   enabled: true

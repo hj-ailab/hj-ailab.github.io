@@ -3,17 +3,17 @@ import Base from '../layouts/Base.astro';
 import PubEntry from '../components/PubEntry.astro';
 import PersonCard from '../components/PersonCard.astro';
 import NewsList from '../components/NewsList.astro';
-import { copy, honors, isConferencePaper, isTopTierPaper, publications, people, news, site } from '../lib/data';
+import { copy, honors, isConferencePaper, isHeadlinePaper, publications, people, news, site } from '../lib/data';
 const conferences = publications.filter(isConferencePaper);
 const conferenceVenues = new Set(conferences.map(paper => paper.venue));
-const venues = [...new Set([...site.top_tier_venues.filter(venue => conferenceVenues.has(venue)), ...conferenceVenues])];
-const topTierVenues = new Intl.ListFormat('en', {style: 'long', type: 'conjunction'}).format(site.top_tier_venues);
+const venues = [...new Set([...site.headline_venues.filter(venue => conferenceVenues.has(venue)), ...conferenceVenues])];
+const topTierVenues = new Intl.ListFormat('en', {style: 'long', type: 'conjunction'}).format(site.headline_venues);
 const recognition = honors.filter(honor => honor.highlight);
 const googleFellowships = recognition.filter(honor => honor.kind === 'fellowship' && honor.org === 'Google');
 const highlights = [
   {id: 'total', count: publications.length, label: 'papers, including preprints'},
   {id: 'conference', count: conferences.length, label: 'peer-reviewed conference papers'},
-  {id: 'top-tier', count: publications.filter(isTopTierPaper).length, label: `papers at ${topTierVenues}`},
+  {id: 'top-tier', count: publications.filter(isHeadlinePaper).length, label: `papers at ${topTierVenues}`},
 ];
 ---
 <Base title="Home">

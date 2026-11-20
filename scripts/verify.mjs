@@ -55,8 +55,9 @@ if (build.code !== 0) {
     const routes = [['home','/'],['research','/research/'],['publications','/publications/'],['people','/people/'],['news','/news/'],['contact','/contact/'],['404','/404.html']];
     const raw=JSON.parse(readFileSync('data/publications.json','utf8'));
     const conferencePapers = raw.filter(paper => !paper.preprint && paper.venue !== 'arXiv');
-    const topTierPapers = conferencePapers.filter(paper => ['NeurIPS', 'ACL', 'EMNLP', 'NAACL', 'ACL Findings'].includes(paper.venue));
-    const expectedCounts = {total: raw.length, conference: conferencePapers.length, 'top-tier': topTierPapers.length};
+    const headlinePapers = conferencePapers.filter(paper => ['NeurIPS', 'ACL', 'EMNLP', 'NAACL', 'ACL Findings'].includes(paper.venue));
+    const topTierPapers = conferencePapers.filter(paper => ['NeurIPS', 'ACL', 'EMNLP', 'NAACL', 'ACL Findings', 'ICASSP', 'CIKM'].includes(paper.venue));
+    const expectedCounts = {total: raw.length, conference: conferencePapers.length, 'top-tier': headlinePapers.length};
     await page.goto(base, {waitUntil:'load'});
     const counts = await page.$$eval('[data-highlight]', items => Object.fromEntries(items.map(el => [el.dataset.highlight, Number(el.textContent)])));
     assert.deepEqual(counts, expectedCounts);

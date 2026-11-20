@@ -21,6 +21,7 @@ export const site = validate('src/data/site.yaml', z.object({
   name: text, github: url,
   founded: z.number().int().min(1900).max(2100),
   top_tier_venues: z.array(text).min(1).refine(venues => new Set(venues).size === venues.length, 'Duplicate top-tier venue'),
+  headline_venues: z.array(text).min(1).refine(venues => new Set(venues).size === venues.length, 'Duplicate headline venue'),
   business: z.object({enabled: z.boolean(), name: z.string(), representative: z.string(), registration_no: z.string(), address: z.string()})
     .refine(b => !b.enabled || [b.name, b.representative, b.registration_no, b.address].every(v => v.trim()), 'Enabled business requires all fields'),
 }));
@@ -67,6 +68,7 @@ export const publications = validate('src/data/publications.yaml', z.array(publi
 export type Publication = z.infer<typeof publicationSchema>;
 export const isConferencePaper = (paper: Publication) => paper.type === 'conference' && paper.venue !== 'arXiv';
 export const isTopTierPaper = (paper: Publication) => isConferencePaper(paper) && site.top_tier_venues.includes(paper.venue);
+export const isHeadlinePaper = (paper: Publication) => isConferencePaper(paper) && site.headline_venues.includes(paper.venue);
 export type Person = (typeof people)[number];
 export const years = [...new Set(publications.map(p => p.year))];
 export const emailText = (email: string) => email.replace('@', ' at ');
