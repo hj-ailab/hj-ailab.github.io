@@ -15,7 +15,7 @@
   topics:
     - understanding
   type: preprint
-  selected: true
+  selected: false
 - title: "VSpark: Speculative Decoding for Autoregressive Vision-Language-Action
     Models"
   authors: Suho Yoo*, Youngjoon Jang*, Hyebin Cho, Taeyeop Lee, Jaewook Jeong,
@@ -117,7 +117,7 @@
   topics:
     - efficiency
   type: preprint
-  selected: true
+  selected: false
 - title: Tracing Audio Grounding and Answer Selection in Audio LLMs
   authors: Hyebin Cho, Suho Yoo, Jihoo Jung, Joon Son Chung
   venue: arXiv
@@ -193,7 +193,7 @@
   topics:
     - understanding
   type: conference
-  selected: false
+  selected: true
 - title: Who Wins the Conflict? Mechanistic Interpretability of Text Bias in Audio
     LLMs
   authors: Hyebin Cho, Suho Yoo, Jaehyuk Jang, Changick Kim, Joon Son Chung
@@ -213,7 +213,7 @@
   topics:
     - understanding
   type: conference
-  selected: false
+  selected: true
 - title: "TempCore: Are Video QA Benchmarks Temporally Grounded? A Frame Selection
     Sensitivity Analysis and Benchmark"
   authors: Hyunjong Ok, Jaeho Lee
@@ -272,7 +272,7 @@
   topics:
     - efficiency
   type: conference
-  selected: false
+  selected: true
 - title: "Lost in the Prompt Order: Revealing the Limitations of Causal Attention
     in Language Models"
   authors: Hyunjong Ok, Jaeho Lee

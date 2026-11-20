@@ -62,6 +62,7 @@ const publicationSchema = z.object({
   if (JSON.stringify(actual) !== JSON.stringify([...paper.members].sort())) ctx.addIssue({code: 'custom', path: ['members'], message: 'Members must match lab authors'});
   if (paper.preprint !== (paper.type === 'preprint')) ctx.addIssue({code: 'custom', path: ['type'], message: 'Type must match preprint status'});
   if (paper.venue === 'arXiv' && !/arxiv\.org\/abs\/[\d.]+/.test(paper.paper)) ctx.addIssue({code: 'custom', path: ['paper'], message: 'arXiv venue requires an arXiv ID'});
+  if (paper.selected && !(paper.type === 'conference' && site.top_tier_venues.includes(paper.venue))) ctx.addIssue({code: 'custom', path: ['selected'], message: 'Selected papers must be top-tier conference papers'});
 });
 export const publications = validate('src/data/publications.yaml', z.array(publicationSchema).min(1).refine(unique, 'Duplicate publication id')).sort((a,b) => b.year-a.year);
 export type Publication = z.infer<typeof publicationSchema>;

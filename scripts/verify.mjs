@@ -60,6 +60,9 @@ if (build.code !== 0) {
     await page.goto(base, {waitUntil:'load'});
     const counts = await page.$$eval('[data-highlight]', items => Object.fromEntries(items.map(el => [el.dataset.highlight, Number(el.textContent)])));
     assert.deepEqual(counts, expectedCounts);
+    const selected = await page.$$eval('[data-publication]', items => items.map(el => ({title: el.querySelector('.paper-title').textContent, topTier: !!el.querySelector('.top-tier')})));
+    assert.ok(selected.length > 0, 'Expected selected publications on home');
+    for (const paper of selected) assert.ok(paper.topTier && topTierPapers.some(p => p.title === paper.title), `selected not top-tier: ${paper.title}`);
     await page.goto(`${base}/publications/`, {waitUntil:'load'});
     const badged = await page.$$eval('[data-publication]:has(.top-tier)', items => items.map(el => el.querySelector('.paper-title').textContent));
     assert.deepEqual(badged.sort(), topTierPapers.map(paper => paper.title).sort());
@@ -78,7 +81,7 @@ if (build.code !== 0) {
       assert.ok(photo.width > 0, `${id} portrait width`);
       section('Member photo', `PASS: ${photo.src} loaded (naturalWidth=${photo.width}).`);
     }
-    section('Highlights and top-tier badges', `PASS: rendered highlights match data/publications.json (${counts.total} total, ${counts['top-tier']} top-tier).\nPASS: all ${badged.length} top-tier badges match papers at the top-tier venues. All ${findings.length} ACL Findings entries are counted.`);
+    section('Highlights and top-tier badges', `PASS: rendered highlights match data/publications.json (${counts.total} total, ${counts['top-tier']} top-tier).\nPASS: all ${badged.length} top-tier badges match papers at the top-tier venues. All ${findings.length} ACL Findings entries are counted.\nPASS: all ${selected.length} selected publications on home are top-tier.`);
     mkdirSync('docs/screens',{recursive:true});
     const screenshots=[];
     for (const theme of ['light','dark']) {
