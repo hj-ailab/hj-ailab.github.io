@@ -3,10 +3,41 @@ import Base from '../layouts/Base.astro';
 import PubEntry from '../components/PubEntry.astro';
 import PersonCard from '../components/PersonCard.astro';
 import NewsList from '../components/NewsList.astro';
-import { copy, publications, people, news } from '../lib/data';
+import { copy, honors, isConferencePaper, isTopTierPaper, publications, people, news, site } from '../lib/data';
+const conferences = publications.filter(isConferencePaper);
+const conferenceVenues = new Set(conferences.map(paper => paper.venue));
+const venues = [...new Set([...site.top_tier_venues.filter(venue => conferenceVenues.has(venue)), ...conferenceVenues])];
+const topTierVenues = new Intl.ListFormat('en', {style: 'long', type: 'conjunction'}).format(site.top_tier_venues);
+const recognition = honors.filter(honor => honor.highlight);
+const googleFellowships = recognition.filter(honor => honor.kind === 'fellowship' && honor.org === 'Google');
+const highlights = [
+  {id: 'total', count: publications.length, label: 'papers, including preprints'},
+  {id: 'conference', count: conferences.length, label: 'peer-reviewed conference papers'},
+  {id: 'top-tier', count: publications.filter(isTopTierPaper).length, label: `papers at ${topTierVenues}`},
+];
 ---
 <Base title="Home">
-  <section class="hero"><p class="eyebrow">{copy.lab.name}</p><h1>{copy.lab.tagline}</h1><p class="intro">{copy.lab.intro}</p><ul class="theme-links">{copy.themes.map((theme, i) => <li><span class="index" aria-hidden="true">0{i+1}</span><a href={`/research/#${theme.id}`}>{theme.bullet}<span aria-hidden="true">↗</span></a></li>)}</ul></section>
+  <section class="hero">
+    <p class="eyebrow">{copy.lab.name}</p><h1>{copy.lab.tagline}</h1><p class="intro">{copy.lab.intro}</p>
+    <section class="highlights" aria-labelledby="highlights-heading">
+      <h2 class="eyebrow" id="highlights-heading">Highlights</h2>
+      <ul class="highlights-grid">
+        {highlights.map(({id, count, label}) => <li><strong data-highlight={id}>{count}</strong><span>{label}</span></li>)}
+        {googleFellowships.length > 0 && <li><strong>{googleFellowships.length}</strong><span>{googleFellowships[0].title}</span></li>}
+      </ul>
+      <p class="venue-strip">{venues.join(' · ')}</p>
+    </section>
+    <ul class="theme-links">{copy.themes.map((theme, i) => <li><span class="index" aria-hidden="true">0{i+1}</span><a href={`/research/#${theme.id}`}>{theme.bullet}<span aria-hidden="true">↗</span></a></li>)}</ul>
+  </section>
+  {recognition.length > 0 && <section class="home-section">
+    <div class="section-heading"><h2>Recognition</h2></div>
+    <ul class="recognition-list">
+      {recognition.map(honor => <li>
+        <strong>{honor.url ? <a href={honor.url}>{honor.title}</a> : honor.title}</strong>
+        <span><a href={`/people/#${honor.member}`}>{people.find(person => person.id === honor.member)!.name}</a> · <time datetime={honor.date}>{honor.date.slice(0, 4)}</time></span>
+      </li>)}
+    </ul>
+  </section>}
   <section class="home-section"><div class="section-heading"><h2>Selected publications</h2><a href="/publications/">All publications →</a></div>{publications.filter(p => p.selected).map(paper => <PubEntry paper={paper} />)}<p class="legend">* Equal contribution</p></section>
   <section class="home-section"><div class="section-heading"><h2>News</h2><a href="/news/">All news →</a></div><NewsList items={news.slice(0,5)} /></section>
   <section class="home-section"><div class="section-heading"><h2>People</h2><a href="/people/">Meet the lab →</a></div><div class="people-strip">{people.map(person => <PersonCard person={person} compact />)}</div></section>

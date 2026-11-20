@@ -1,32 +1,32 @@
 lab:
   name: 'HJ AILAB'
   tagline: >-
-    We study evaluation, efficiency, and internal mechanisms across multimodal, speech, and language models.
+    We take on the frontier of full-duplex spoken dialogue models that listen and speak simultaneously.
   intro: >-
-    HJ AILAB is a two-person independent AI research lab founded in 2026 by Hyunjong Ok and Suho Yoo. As graduate students at POSTECH and KAIST, we run the lab alongside our degrees. We publish joint and individual research on speech, multimodal, and language models, including joint papers at ICASSP, ACL, and ACL Findings.
+    HJ AILAB is a two-person independent AI research lab founded in 2023, and its core researchers are Hyunjong Ok and Suho Yoo. As graduate students at POSTECH and KAIST, we run the lab alongside our degrees. Our goal is full-duplex spoken dialogue, where models listen and speak simultaneously and handle turn-taking, interruptions, and backchannels in real time. Toward that goal, we publish joint and individual research on speech, multimodal, and language models, including joint papers at ICASSP, ACL, and ACL Findings.
   about: >-
-    HJ AILAB is a two-person independent AI research lab founded in 2026 by Hyunjong Ok and Suho Yoo, who run the lab alongside their graduate degrees at POSTECH and KAIST. We study how to measure multimodal, speech, and language models through diagnostic benchmarks and simulator-based evaluations, and how to make speech and omni models cheaper to run. We also examine how models use knowledge and attention inside, and what structures language models build when they write network weights themselves.
+    HJ AILAB is a two-person independent AI research lab founded in 2023. Its core researchers are Hyunjong Ok and Suho Yoo, graduate students at POSTECH and KAIST who run the lab alongside their degrees. Our goal is full-duplex spoken dialogue, where models listen and speak at the same time and handle turn-taking, interruptions, and backchannels in real time. Toward that goal, we measure what speech, multimodal, and language models can actually do, make speech and omni models fast enough for live conversation, and study auditory knowledge, attention, and how language models write network weights.
 
 themes:
   - id: 'evaluation'
-    title: 'Evaluation and Benchmarking'
-    bullet: 'Measuring what multimodal, speech, and language models can actually do.'
+    title: 'Evaluation Toward Spoken Dialogue'
+    bullet: 'Measuring what speech, multimodal, and language models can do to support full-duplex evaluation.'
     summary: >-
-      We study how to measure what multimodal, speech, and language models can actually do. Our work includes diagnostic benchmarks such as AuditoryBench++ and TempCore, hierarchical compression of vision-language model benchmarks, and analyses of evaluation bias such as One Bias Score, Two Factors. We also develop voice-agent and simulator-based evaluation methods.
+      Evaluating future full-duplex systems requires reliable tests of listening, timing, and interactive conversation. We study how to measure what speech, multimodal, and language models can actually do, including voice-agent and simulator-based evaluation of spoken conversation. Representative work includes TempCore, AuditoryBench++, evaluation bias analysis in One Bias Score, Two Factors, and Hierarchical Compression of Vision-Language Model Benchmarks.
   - id: 'efficiency'
-    title: 'Model Efficiency'
-    bullet: 'Making speech, omni, and vision-language-action models cheaper to run.'
+    title: 'Efficiency for Real-Time Conversation'
+    bullet: 'Making speech and omni models fast and cheap enough for real-time spoken conversation.'
     summary: >-
-      We develop methods that make speech, omni, and vision-language-action models cheaper to run. Our work covers KV cache quantization, token compression, speculative decoding, and early end-of-turn detection. Representative papers include OmniKVQuant for omni-LLMs, VSpark for autoregressive vision-language-action models, Out of Sight, Still in Mind, and Speculative End-Turn Detector.
+      Full-duplex systems require speech and omni models that are fast and cheap enough for real-time conversation. We study KV cache quantization in OmniKVQuant, token compression in Out of Sight, Still in Mind, speculative decoding in VSpark, and early end-of-turn detection in Speculative End-Turn Detector. The end-turn detector paper is our published work closest to turn-taking.
   - id: 'understanding'
-    title: 'Understanding Model Internals'
-    bullet: 'Studying internal attention, grounded knowledge, and how language models write network weights.'
+    title: 'Auditory Grounding and Model Internals'
+    bullet: 'Studying auditory knowledge, attention, and how language models write weights, informing full-duplex models.'
     summary: >-
-      We study how models use knowledge and attention inside, examining attention sinks, text bias, and audio grounding. We also investigate weight-space programming, where a language model writes a network's weights directly without gradient training. Representative papers include Attention Sink in Omni-LLMs, Who Wins the Conflict, and Weight-Space Programming Doesn't Need Transformers.
+      Building toward full-duplex systems requires understanding how models ground audio inputs, allocate attention, and construct model parameters. We study how models use auditory knowledge, attention, and grounding inside, and what structures language models build when they write network weights directly. Representative papers include Attention Sink in Omni-LLMs, Who Wins the Conflict, and Weight-Space Programming Doesn't Need Transformers, alongside our joint auditory-knowledge papers AudioBERT and Imagine to Hear.
 
 people:
   - id: 'hyunjong'
-    role: 'Co-founder'
+    role: 'Core Researcher'
     affiliation: 'Ph.D. student, Graduate School of AI, POSTECH'
     interests:
       - 'Multimodal and speech evaluation'
@@ -36,7 +36,7 @@ people:
     bio: >-
       Hyunjong Ok is a Ph.D. student at POSTECH advised by Prof. Jaeho Lee. Hyunjong studies diagnostic benchmarks, voice-agent and simulator-based evaluation, weight-space programming, and how language models use knowledge grounded in other modalities.
   - id: 'suho'
-    role: 'Co-founder'
+    role: 'Core Researcher'
     affiliation: 'M.S. student, Electrical Engineering, KAIST'
     interests:
       - 'Large language models'
@@ -47,10 +47,6 @@ people:
       Suho Yoo is an M.S. student at KAIST advised by Prof. Joon Son Chung. Suho works on multimodal learning and speech processing, with recent papers on efficient omni-LLMs and interpretability of audio and omni-LLMs.
 
 news:
-  - date: '2026-11'
-    category: 'release'
-    text: >-
-      Hyunjong Ok and Suho Yoo launched HJ AILAB and put this website online.
   - date: '2026-11'
     category: 'paper'
     text: >-
@@ -73,4 +69,4 @@ contact:
     We welcome questions, research discussions, and collaboration inquiries on speech, multimodal, and language models. Because HJ AILAB does not have a shared lab email yet, please email Hyunjong Ok at hyunjong.ok@postech.ac.kr or Suho Yoo at suho.yoo@kaist.ac.kr directly.
 
 footer:
-  blurb: 'HJ AILAB is a two-person independent AI research lab founded in 2026.'
+  blurb: 'HJ AILAB is an independent lab founded in 2023, pursuing the frontier of full-duplex models.'

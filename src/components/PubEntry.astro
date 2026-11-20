@@ -1,15 +1,15 @@
 ---
-import { people, type Publication } from '../lib/data';
+import { isTopTierPaper, people, type Publication } from '../lib/data';
 import { bibtex } from '../lib/bibtex';
-interface Props { paper: Publication }
-const { paper } = Astro.props;
+interface Props { paper: Publication; showTopTier?: boolean }
+const { paper, showTopTier = false } = Astro.props;
 const authors = paper.authors.split(',').map(value => {
   const name = value.trim();
   return {name, member: people.find(person => person.name === name.replace(/\*$/, ''))};
 });
 ---
 <article class="publication" id={paper.id} data-publication data-search={`${paper.title} ${paper.authors}`.toLowerCase()} data-topics={paper.topics.join(' ')} data-year={paper.year} data-type={paper.type} data-members={paper.members.join(' ')}>
-  <div class="pub-meta"><span>{paper.venue} {paper.year}</span>{paper.note && <span class="award">{paper.note}</span>}</div>
+  <div class="pub-meta"><span class="venue-line"><span>{paper.venue} {paper.year}</span>{showTopTier && isTopTierPaper(paper) && <span class="top-tier">Top-tier</span>}</span>{paper.note && <span class="award">{paper.note}</span>}</div>
   <div class="pub-body">
     <h3><a class="paper-title" href={paper.paper}>{paper.title}</a></h3>
     <p class="authors">{authors.map(({name, member}, i) => <>{i > 0 && ', '}{member ? <a href={`/people/#${member.id}`}><strong>{name}</strong></a> : name}</>)}</p>

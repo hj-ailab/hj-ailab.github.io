@@ -156,11 +156,18 @@ a,pre,p,h1,h2,h3 {
 }
 
 .wordmark {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
   font:600 28px var(--serif);
   letter-spacing:-1px;
   color:var(--ink);
   text-decoration:none;
   white-space:nowrap;
+}
+
+.wordmark img {
+  border-radius:7px;
 }
 
 .wordmark-dot {
@@ -238,6 +245,83 @@ main {
   margin:28px 0 0;
 }
 
+.highlights {
+  margin-top:32px;
+}
+
+.highlights h2 {
+  margin-bottom:12px;
+  font-weight:400;
+  letter-spacing:.11em;
+}
+
+.highlights-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-block:1px solid var(--rule);
+}
+
+.highlights-grid li {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:16px;
+  font-size:15px;
+  line-height:1.4;
+}
+
+.highlights-grid li + li {
+  border-left:1px solid var(--rule);
+}
+
+.highlights-grid strong {
+  font:600 40px/1 var(--serif);
+  color:var(--accent);
+}
+
+.venue-strip {
+  max-width:none;
+  margin:12px 0 0;
+  color:var(--muted);
+  font:12px/1.65 var(--mono);
+}
+
+.recognition-list,.person-record ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.recognition-list li,.person-record li {
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  padding:12px 0;
+  border-top:1px solid var(--rule);
+  overflow-wrap:anywhere;
+}
+
+.recognition-list li > span,.person-record li > span {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.person-record {
+  margin-top:32px;
+}
+
+.person-record h3,.person-record h4 {
+  margin:0 0 12px;
+}
+
+.person-record h4 {
+  margin-top:18px;
+  font-size:15px;
+}
+
 .theme-links {
   list-style:none;
   margin:36px 0 0;
@@ -306,6 +390,22 @@ main {
   align-items:flex-start;
   flex-direction:column;
   gap:10px;
+}
+
+.venue-line {
+  display:inline-flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px 7px;
+}
+
+.top-tier {
+  padding:1px 4px;
+  border:1px solid currentColor;
+  border-radius:3px;
+  color:var(--accent);
+  font-size:10px;
+  white-space:nowrap;
 }
 
 .award {
@@ -760,7 +860,7 @@ legend {
 }
 
 .publication-year .publication {
-  grid-template-columns:115px minmax(0,1fr);
+  grid-template-columns:154px minmax(0,1fr);
   gap:24px;
 }
 
@@ -869,6 +969,19 @@ legend {
   .intro {
     font-size:18px;
     margin-top:24px;
+  }
+  .highlights-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .highlights-grid li {
+    padding:12px;
+    font-size:14px;
+  }
+  .highlights-grid li:nth-child(odd) {
+    border-left:0;
+  }
+  .highlights-grid li:nth-child(n+3) {
+    border-top:1px solid var(--rule);
   }
   .eyebrow {
     font-size:11px;

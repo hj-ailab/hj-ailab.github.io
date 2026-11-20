@@ -1,0 +1,75 @@
+# Public honors of lab members. Sources: hj-ok.github.io (Scholarships, Awards, Academic Service) and suho-yoo.github.io/assets/CV_SuhoYoo.pdf.
+- title: Google Ph.D. Fellowship in Natural Language Processing
+  org: Google
+  date: 2026-09
+  member: hyunjong
+  kind: fellowship
+  highlight: true
+  url: https://research.google/programs-and-events/phd-fellowship/
+- title: National Science and Technology Scholarship (M.S. Track)
+  org: Korea Student Aid Foundation
+  date: 2025-09
+  member: suho
+  kind: scholarship
+- title: Soseon Sharing Fund Scholarship (Science and Technology)
+  org: Community Chest of Korea, Daegu Branch
+  date: 2026-09
+  member: hyunjong
+  kind: scholarship
+- title: 3·1 Scholarship
+  org: The 3·1 Foundation
+  date: 2026-08
+  member: hyunjong
+  kind: scholarship
+- title: Ph.D. Excellence Scholarship (Science and Engineering)
+  org: Korea Student Aid Foundation
+  date: 2026-06
+  member: hyunjong
+  kind: scholarship
+- title: Outstanding Paper Award, CKAIA 2025
+  org: Korean Artificial Intelligence Association
+  date: 2025-08
+  member: hyunjong
+  kind: award
+- title: Outstanding Paper Award, JKAIA 2024
+  org: Korean Artificial Intelligence Association
+  date: 2024-11
+  member: hyunjong
+  kind: award
+- title: Outstanding Paper Award
+  org: Korean Artificial Intelligence Association
+  date: 2024-11
+  member: suho
+  kind: award
+- title: 1st Place, ICASSP 2023 MUG Grand Challenge (Track 2, Extractive Text Summarization)
+  org: Alibaba Cloud
+  date: 2023-02
+  member: hyunjong
+  kind: competition
+  highlight: true
+- title: 2nd Place, SIGIR 2023 KDF Workshop Shared Task (Relation Extraction)
+  org: J.P. Morgan AI Research
+  date: 2023-06
+  member: hyunjong
+  kind: competition
+- title: 1st Place and Minister's Award, Korean AI Challenge (ASR Track)
+  org: Korea Ministry of Science and ICT
+  date: 2022-10
+  member: hyunjong
+  kind: competition
+  highlight: true
+- title: 1st Place, Legal Judgment Prediction Challenge
+  org: Law & Company
+  date: 2022-12
+  member: hyunjong
+  kind: competition
+- title: Kaggle Competitions, two Silver medals and one Bronze medal
+  org: Kaggle
+  date: 2023-10
+  member: hyunjong
+  kind: competition
+- title: KT Hope Sharing Foundation Scholarship
+  org: KT Hope Sharing Foundation
+  date: 2023-09
+  member: suho
+  kind: scholarship

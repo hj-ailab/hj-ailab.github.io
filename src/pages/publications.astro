@@ -13,7 +13,7 @@ const facets = [
   <header class="page-heading"><p class="eyebrow">HJ AILAB / Publications</p><h1>Publications</h1></header>
   <form id="publication-filters" class="filters" hidden role="search" aria-label="Filter publications"><label class="search-label" for="q">Search title or authors</label><input id="q" name="q" type="search" autocomplete="off" placeholder="Search publications…" />{facets.map(facet => <fieldset><legend>{facet.label}</legend><div class="filter-options"><label><input type="radio" name={facet.name} value="" checked /><span>All{facet.name === 'topic' && ` (${publications.length})`}</span></label>{facet.options.map(option => <label><input type="radio" name={facet.name} value={option.value} /><span>{option.label}</span></label>)}</div></fieldset>)}</form>
   <div class="results-bar"><p id="result-count" role="status" aria-live="polite">{publications.length} publications · newest first</p><a href="/publications/" data-clear>Clear filters</a></div>
-  <div id="publication-list">{years.map(year => <section class="publication-year" data-year-group><h2>{year}</h2><div>{publications.filter(p => p.year === year).map(paper => <PubEntry paper={paper} />)}</div></section>)}</div>
+  <div id="publication-list">{years.map(year => <section class="publication-year" data-year-group><h2>{year}</h2><div>{publications.filter(p => p.year === year).map(paper => <PubEntry paper={paper} showTopTier />)}</div></section>)}</div>
   <p id="empty-state" hidden>No publications match these filters. <a href="/publications/" data-clear>Clear filters</a>.</p>
   <p class="legend">* Equal contribution</p>
   <script src="../scripts/pub-filter.ts"></script>

@@ -1,6 +1,40 @@
 ---
 import Base from '../layouts/Base.astro';
 import PersonCard from '../components/PersonCard.astro';
-import { people } from '../lib/data';
+import { honors, people, service } from '../lib/data';
+const honorGroups = [
+  {title: 'Fellowships and scholarships', kinds: ['fellowship', 'scholarship']},
+  {title: 'Awards and competitions', kinds: ['award', 'competition']},
+];
 ---
-<Base title="People"><header class="page-heading"><p class="eyebrow">HJ AILAB / People</p><h1>People</h1></header><div class="people-grid">{people.map(person => <PersonCard person={person} />)}</div></Base>
+<Base title="People">
+  <header class="page-heading"><p class="eyebrow">HJ AILAB / People</p><h1>People</h1></header>
+  <div class="people-grid">
+    {people.map(person => {
+      const memberHonors = honors.filter(honor => honor.member === person.id);
+      const memberService = service.filter(entry => entry.member === person.id);
+      return <div>
+        <PersonCard person={person} />
+        {memberHonors.length > 0 && <section class="person-record">
+          <h3>Honors</h3>
+          {honorGroups.map(group => {
+            const entries = memberHonors.filter(honor => group.kinds.includes(honor.kind));
+            return entries.length > 0 && <>
+              <h4>{group.title}</h4>
+              <ul>
+                {entries.map(honor => <li>
+                  <strong>{honor.url ? <a href={honor.url}>{honor.title}</a> : honor.title}</strong>
+                  <span>{honor.org} · <time datetime={honor.date}>{honor.date}</time></span>
+                </li>)}
+              </ul>
+            </>;
+          })}
+        </section>}
+        {memberService.length > 0 && <section class="person-record">
+          <h3>Service</h3>
+          <ul>{memberService.map(entry => <li><strong>{entry.role}</strong><span>{entry.venues.join(' · ')}</span></li>)}</ul>
+        </section>}
+      </div>;
+    })}
+  </div>
+</Base>

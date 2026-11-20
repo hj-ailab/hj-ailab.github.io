@@ -6,3 +6,5 @@ dist/
 briefs/
 docs/suho_photo.jpg
 *.laneexit
+.assets-src/
+*.agy.json
